@@ -1,0 +1,43 @@
+
+{
+  "schemaVersion": 1,
+  "id": "enchant-everything",
+  "version": "${version}+fabric+1.21.11",
+  "environment": "*",
+  "depends": {
+    "fabricloader": ">=0.18.4",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "name": "Enchant Everything",
+  "description": "This mod allows ALL items in Minecraft to be enchanted using the Enchanting Table and Anvil, making enchantments fully functional on every item.",
+  "authors": [
+    "shimaper"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/project/enchant-everything",
+    "sources": "https://github.com/sourcels/enchant-everything",
+    "issues": "https://github.com/sourcels/enchant-everything/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/enchant-everything/icon.png",
+  "entrypoints": {
+    "main": [
+      "com.shimaper.enchanteverything.EnchantEverything"
+    ]
+  },
+  "mixins": [
+    "enchant-everything.mixins.json"
+  ],
+  "custom": {
+    "modmenu": {
+      "config_screen": "com.shimaper.allitemsenchantable.config.ModMenuIntegration",
+      "links": {
+        "modmenu.discord": "",
+        "modmenu.donate": ""
+      },
+      "update_checker": true
+    }
+  }
+}
